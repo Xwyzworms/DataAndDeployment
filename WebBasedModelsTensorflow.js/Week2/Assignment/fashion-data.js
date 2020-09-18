@@ -15,20 +15,19 @@
  * =============================================================================
  */
 
-
 const IMAGE_SIZE = 784;
 const NUM_CLASSES = 10;
-const NUM_DATASET_ELEMENTS = 65000;
+const NUM_DATASET_ELEMENTS = 70000;
 
-const TRAIN_TEST_RATIO = 5 / 6;
+const TRAIN_TEST_RATIO = 1 / 7;
 
 const NUM_TRAIN_ELEMENTS = Math.floor(TRAIN_TEST_RATIO * NUM_DATASET_ELEMENTS);
 const NUM_TEST_ELEMENTS = NUM_DATASET_ELEMENTS - NUM_TRAIN_ELEMENTS;
 
 const MNIST_IMAGES_SPRITE_PATH =
-    'https://storage.googleapis.com/learnjs-data/model-builder/mnist_images.png';
+    'https://storage.googleapis.com/learnjs-data/model-builder/fashion_mnist_images.png';
 const MNIST_LABELS_PATH =
-    'https://storage.googleapis.com/learnjs-data/model-builder/mnist_labels_uint8';
+    'https://storage.googleapis.com/learnjs-data/model-builder/fashion_mnist_labels_uint8';
 
 /**
  * A class that fetches the sprited MNIST dataset and returns shuffled batches.
@@ -36,7 +35,7 @@ const MNIST_LABELS_PATH =
  * NOTE: This will get much easier. For now, we do data fetching and
  * manipulation manually.
  */
-export class MnistData {
+export class FMnistData {
   constructor() {
     this.shuffledTrainIndex = 0;
     this.shuffledTestIndex = 0;
