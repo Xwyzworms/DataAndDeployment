@@ -14,7 +14,7 @@ class RPSDataset {
       oldX.dispose();
     }
   }
-  
+
   encodeLabels(numClasses) {
     for (var i = 0; i < this.labels.length; i++) {
       if (this.ys == null) {
